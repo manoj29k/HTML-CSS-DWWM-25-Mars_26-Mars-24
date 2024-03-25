@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --j: rgb(0, 4, 4); 
+    --px: 10px;
+    --g: grey;
+}
+
+header{
+    width: 100vw;
+    height: 8vh;
+    background: var(--j);
+    padding: var(--px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    border-bottom: 2px dotted white;
+}
+
+ul,section{display: flex;}
+
+header+section{
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/slide.jpg) 0 0 no-repeat black;
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    width: 500px;
+}
+
+li{
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a[ href="/index.html"]{
+    color: turquoise;
+    font-size: 30px;
+}
