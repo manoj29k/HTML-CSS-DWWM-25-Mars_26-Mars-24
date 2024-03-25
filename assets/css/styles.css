@@ -1,53 +1,90 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-}
-
-:root{
-    --j: rgb(0, 4, 4); 
+    max-width: 100%;
+  }
+  
+  :root {
+    --j: rgb(0, 0, 0);
     --px: 10px;
     --g: grey;
-}
-
-header{
+  }
+  
+  header {
     width: 100vw;
-    height: 8vh;
+    min-height: 8vh;
     background: var(--j);
     padding: var(--px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    border-bottom: 2px dotted white;
-}
-
-ul,section{display: flex;}
-
-header+section{
+    border-bottom: 1px double white;
+  }
+  
+  ul,
+  section,
+  section > div {
+    display: flex;
+  }
+  
+  header + section {
     width: 100vw;
     height: 100vh;
     background: url(../img/slide.jpg) 0 0 no-repeat black;
-    background-position: center;
     background-size: cover;
-}
-nav{
+  }
+  
+  nav {
     width: 500px;
-}
-
-li{
+  }
+  
+  li {
     display: block;
     width: 100px;
     text-align: center;
-}
-
-a{
+  }
+  
+  a {
     text-decoration: none;
     color: white;
-}
-
-a[ href="/index.html"]{
+  }
+  
+  a[href="index.html"] {
     color: turquoise;
     font-size: 30px;
-}
+  }
+  
+  main {
+    background: var(--g);
+  }
+  
+  section {
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  section div {
+    min-height: 60vh;
+  }
+  
+  article {
+    flex: 1;
+    border: 1px solid black;
+    min-height: 60vh;
+  }
+  
+  main > section:nth-child(2) > div > article:nth-child(4) {
+    background: yellow;
+    flex: 3;
+    min-height: 30vh;
+    align-self: flex-start;
+  }
+  
+  main > section:nth-child(2) {
+    display: inherit;
+    padding-top: 20vh;
+  }
