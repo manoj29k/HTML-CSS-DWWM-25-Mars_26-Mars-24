@@ -1,61 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-    max-width: 100%;
   }
   
+  body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
   :root {
     --j: rgb(0, 0, 0);
     --px: 10px;
-    --g: grey;
+    --g: wheat;
   }
-  
-  header {
-    width: 100vw;
-    min-height: 8vh;
-    background: var(--j);
-    padding: var(--px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    border-bottom: 1px double white;
-  }
-  
-  ul,
-  section,
-  section > div {
-    display: flex;
-  }
-  
+@media screen and (min-width: 1024px){
   header + section {
     width: 100vw;
     height: 100vh;
     background: url(../img/slide.jpg) 0 0 no-repeat black;
     background-size: cover;
   }
-  
-  nav {
-    width: 500px;
+}
+
+@media screen and (min-width: 980px) and (max-width: 1279px)  {
+  header + section {
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/slide2.jpg) 0 0 no-repeat black;
+    background-size: cover;
   }
-  
-  li {
-    display: block;
-    width: 100px;
-    text-align: center;
+}
+@media screen and (min-width: 480px) and (max-width: 979px)  {
+  header + section {
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/slide2.jpg) 0 0 no-repeat black;
+    background-size: cover;
   }
+}
   
-  a {
-    text-decoration: none;
-    color: white;
+
+ main > section{
+    padding-left: 25px;
   }
-  
-  a[href="index.html"] {
-    color: turquoise;
-    font-size: 30px;
-  }
+
   
   main {
     background: var(--g);
@@ -67,24 +57,14 @@
     min-height: 100vh;
   }
   
-  section div {
-    min-height: 60vh;
-  }
   
   article {
     flex: 1;
     border: 1px solid black;
-    min-height: 60vh;
+    /* min-height: 60vh; */
   }
   
-  main > section:nth-child(2) > div > article:nth-child(4) {
-    background: yellow;
-    flex: 3;
-    min-height: 30vh;
-    align-self: flex-start;
-  }
-  
+
   main > section:nth-child(2) {
     display: inherit;
-    padding-top: 20vh;
   }
