@@ -51,7 +51,7 @@ section {
 }
 
 a > span::before {
-  content: "manoj@example.com";
+  content: "";
   color: white;
   margin: 10px auto 0;
   border: 1px solid white;
@@ -62,10 +62,10 @@ a > span::before {
   height: 40px;
   text-align: center;
   line-height: 40px;
-  /* animation: manoj  2s ease-in-out infinite; */
+  animation: manoj  1s ease-in-out infinite;
 }
 
-/* @keyframes manoj {
+@keyframes manoj {
   0%,
   100% {
     content: "en";
@@ -76,7 +76,11 @@ a > span::before {
   }
 
   60%,
-  80% {
-    content: "en savoir +";
+  70% {
+    content: "en savoir plus";
   }
-} */
+
+  80%,90%{
+    content: "en savoir plus . .";
+  }
+}
